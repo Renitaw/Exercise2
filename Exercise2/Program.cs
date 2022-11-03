@@ -64,6 +64,34 @@ namespace Exercise2
             {
                 Console.WriteLine(Renita[RW]);
             }
+            Console.WriteLine("");
+        }
+
+        //Membuat method untuk menggabungkan array 
+        static public void MainMerge(int[] Renita, int low, int mid, int high)
+        {
+            int[] temp = new int[34];
+            int i, eol, num, pos;
+            eol = (mid - 1);
+            pos = low;
+            num = (high - low + 1);
+
+            while ((low <= eol) && (mid <= high))
+            {
+                if (Renita[low] <= Renita[mid])
+                    temp[pos++] = Renita[low++];
+                else
+                    temp[pos++] = Renita[mid++];
+            }
+            while (low <= eol)
+                temp[pos++] = Renita[low++];
+            while (mid <= high)
+                temp[pos++] = Renita[mid++];
+            for (i = 0; i < num; i++)
+            {
+                Renita[high] = temp[high];
+                high--;
+            }
         }
        
     }
