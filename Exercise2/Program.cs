@@ -50,6 +50,19 @@ namespace Exercise2
                     Renita[RW + 1] = Renita[RW];
                     RW = RW - 1;
                 }
+                Renita[RW + 1] = temp;
+            }
+        }
+        //creating a method to display the sorted array 
+        public void display()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("----------------------");
+            Console.WriteLine(" Sorted array elements");
+            Console.WriteLine("----------------------");
+            for (int RW = 0; RW < n; RW++)
+            {
+                Console.WriteLine(Renita[RW]);
             }
         }
        
