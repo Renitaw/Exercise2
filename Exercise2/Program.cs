@@ -110,11 +110,70 @@ namespace Exercise2
         //create main agar program dapat berjalan 
         static void Main(string[] args)
         {
-           
+            //declaring pilihanmenu
+            program P = new program();
+            int pilihanmenu;
+
+            //creating a menu
+            do
+            {
+                Console.WriteLine("Menu Option");
+                Console.WriteLine("==================");
+                Console.WriteLine("1.insertion sort");
+                Console.WriteLine("2.merge sort");
+                Console.WriteLine("3.Exit");
+                Console.Write("Enter your choice (1,2,3) : ");
+                pilihanmenu = Convert.ToInt32(Console.ReadLine());
+
+                switch (pilihanmenu)
+                {
+                    case 1:
+                        Console.WriteLine("");
+                        Console.WriteLine(". . . . . . . . . . . .");
+                        Console.WriteLine("insertion sort");
+                        Console.WriteLine(". . . . . . . . . . . .");
+                        P.input();
+                        P.insertionsort();
+                        P.display();
+                        break;
+                    case 2:
+                        Console.WriteLine("");
+                        Console.WriteLine(". . . . . . . . . . . .");
+                        Console.WriteLine("merge sort");
+                        Console.WriteLine(". . . . . . . . . . . .");
+                        Console.Write("\nProgram for sorting a numeric array using Merge Sorting");
+                        Console.Write("\n\nEnter number of elements: ");
+                        int max = Convert.ToInt32(Console.ReadLine());
+                        int[] numbers = new int[max];
+                        for (int i = 0; i < max; i++)
+                        {
+                            Console.Write("\nEnter [" + (i + 1).ToString() + "] element: ");
+                            numbers[i] = Convert.ToInt32(Console.ReadLine());
+                        }
+                        Console.Write("Input int array : ");
+                        Console.Write("\n");
+                        for (int k = 0; k < max; k++)
+                        {
+                            Console.Write(numbers[k] + " ");
+                            Console.Write("\n");
+                        }
+                        Console.WriteLine("Sorted Array");
+                        SortMerge(numbers, 0, max - 1);
+                        for (int i = 0; i < max; i++)
+                            Console.WriteLine(numbers[i]);
+                        Console.ReadLine();
+                        break;
+                    case 3:
+                        Console.WriteLine("exit");
+                        break;
+                    default:
+                        Console.WriteLine("error");
+                        break;
+                }
+                Console.WriteLine("\n\nPress Return to exit");
+                Console.ReadLine();
+            } while (pilihanmenu != 3);
         }
-
     }
-
-
 }
-
+       
