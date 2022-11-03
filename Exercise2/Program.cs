@@ -129,18 +129,18 @@ namespace Exercise2
                 {
                     case 1:
                         Console.WriteLine("");
-                        Console.WriteLine(". . . . . . . . . . . .");
+                        Console.WriteLine("-----------------------");
                         Console.WriteLine("insertion sort");
-                        Console.WriteLine(". . . . . . . . . . . .");
+                        Console.WriteLine("-----------------------");
                         P.input();
                         P.insertionsort();
                         P.display();
                         break;
                     case 2:
                         Console.WriteLine("");
-                        Console.WriteLine(". . . . . . . . . . . .");
+                        Console.WriteLine("-----------------------");
                         Console.WriteLine("merge sort");
-                        Console.WriteLine(". . . . . . . . . . . .");
+                        Console.WriteLine("-----------------------");
                         Console.Write("\nProgram for sorting a numeric array using Merge Sorting");
                         Console.Write("\n\nEnter number of elements: ");
                         int max = Convert.ToInt32(Console.ReadLine());
