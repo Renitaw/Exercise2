@@ -107,6 +107,12 @@ namespace Exercise2
             }
         }
 
+        //create main agar program dapat berjalan 
+        static void Main(string[] args)
+        {
+           
+        }
+
     }
 
 
