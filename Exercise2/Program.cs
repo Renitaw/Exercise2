@@ -110,7 +110,7 @@ namespace Exercise2
         //create main agar program dapat berjalan 
         static void Main(string[] args)
         {
-            //declaring pilihanmenu
+            //deklarasi pilihan menu
             program P = new program();
             int pilihanmenu;
 
