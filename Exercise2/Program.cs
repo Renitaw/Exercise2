@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace Exercise2
 {
-    internal class Program
+    class program
     {
-        static void Main(string[] args)
-        {
-        }
+        //deklarasi array and variabel 
+        private int[] Renita = new int[30];
+        int n;
+        int i;
     }
+
+
 }
+
