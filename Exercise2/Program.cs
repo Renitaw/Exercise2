@@ -93,7 +93,20 @@ namespace Exercise2
                 high--;
             }
         }
-       
+
+        //Membuat method untuk mengurutkan array gabungan 
+        static public void SortMerge(int[] Renita, int low, int high)
+        {
+            int mid;
+            if (high > low)
+            {
+                mid = (high + low) / 2;
+                SortMerge(Renita, low, mid);
+                SortMerge(Renita, (mid + 1), high);
+                MainMerge(Renita, low, (mid + 1), high);
+            }
+        }
+
     }
 
 
